@@ -6,10 +6,7 @@
 with open('key.txt') as f:
     PAT = f.read()
 
-
 import github3
-import requests
-
 
 github = github3.login(token=PAT)
 

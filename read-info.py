@@ -3,8 +3,16 @@
 # you need some way to reference a Personal Access Token (PAT) without hard-coding it - NEVER hard-code your PAT or commit it to GitHub
 # the PAT needs the following permissions: repo
 # how to generate PAT: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
-with open('key.txt') as f:
-    PAT = f.read()
+
+# my really hacky way of doing it - split the PAT in 2! 
+with open('key1.txt') as f:
+    PAT1 = f.read()
+
+with open('key2.txt') as x: 
+    PAT2 = x.read()
+
+PAT = PAT1+PAT2
+print(PAT)
 
 import github3
 
